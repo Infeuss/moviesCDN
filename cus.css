@@ -440,6 +440,9 @@ background-color: #f00;
   transition: all 0.15s ease-in;
 
 }
+.bottom-video-controls:hover{
+--bottom-hover:true;
+}
 
 .video-progress{
   position: relative;
