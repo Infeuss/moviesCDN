@@ -401,18 +401,18 @@ class methods extends load_structure{
     const time = this.formatTime(Math.round(this.video.currentTime));
     let time_str = (time.hour != '00') ? `${time.hour}:${time.minutes}:${time.seconds}` : `${time.minutes}:${time.seconds}`;
     this.currentTime.innerText = time_str;
-
-    if(!this.bottom_controls.matches(':hover') 
-      && !this.left_control_top.matches(':hover') 
+      
+    if(!this.checkis_hover(this.bottom_controls) 
+      && !this.checkis_hover(this.left_control_top) 
       && this.timeout_hide == null 
       && !this.setting_button.querySelector('svg').classList.contains('setting-rotate')   
       && this.video_container.classList.contains('video-continer-hover')){
 
       clearTimeout(this.timeout_hide);
       this.timeout_hide = setTimeout(() => {
-          if(!this.bottom_controls.matches(':hover') 
+          if(!this.checkis_hover(this.bottom_controls) 
           && this.video_container.classList.contains('video-continer-hover') 
-          &&!this.left_control_top.matches(':hover') 
+          &&!this.checkis_hover(this.left_control_top) 
           && !this.setting_button.querySelector('svg').classList.contains('setting-rotate') 
           && !this.video.paused){
 
@@ -449,7 +449,7 @@ class methods extends load_structure{
   }
 
   on_container_move_hover = () =>{
-    if(window.matchMedia("(any-hover: none)").matches && !this.bottom_controls.matches(':hover') && !this.setting_menu.matches(':hover')) {
+    if(window.matchMedia("(any-hover: none)").matches && !this.checkis_hover(this.bottom_controls) && !this.checkis_hover(this.setting_menu)) {
 
       (this.video_container.classList.contains('video-continer-hover')) ? this.remove_controls() :  this.add_controls();
 
@@ -461,9 +461,9 @@ class methods extends load_structure{
   }
 
   on_container_click = ()=>{
-    if(!this.setting_button.matches(':hover') && !this.setting_menu.matches(':hover')){
+    if(!this.checkis_hover(this.setting_button) && !this.checkis_hover(this.setting_menu)){
       this.remove_setting_menu();
-      if(!window.matchMedia("(any-hover: none)").matches && !this.bottom_controls.matches(':hover')){
+      if(!window.matchMedia("(any-hover: none)").matches && !this.checkis_hover(this.bottom_controls)){
         this.toggle_video();
       }
     }
@@ -631,7 +631,7 @@ class methods extends load_structure{
   }
 
   switch_toggle = (e)=>{
-  if(e.target.getAttribute('id') === 'annotations' && this.switch.matches(':hover')) return;
+  if(e.target.getAttribute('id') === 'annotations' && this.checkis_hover(this.switch)) return;
 
   if(this.switch.checked){
     this.switch.checked = false;
@@ -683,12 +683,16 @@ class methods extends load_structure{
     this.close_submenu();
   }
 
+  checkis_hover = (ele)=>{
+    if(getComputedStyle(ele).getPropertyValue('--hover') == 1){
+      return true;
+    }
+    return false;
+  }
+
   animatePlayback = ()=>{
-       console.log(this.bottom_controls.matches(':hover'));
-       console.log(document.documentElement.style.getPropertyValue('--bottom-hover'));
-      
-       
-    if(!this.bottom_controls.matches(':hover')){
+  
+    if(!this.checkis_hover(this.bottom_controls)){
         this.animation_playback.animate([
           {
             opacity: 1,
@@ -932,7 +936,14 @@ class methods extends load_structure{
   window.addEventListener("orientationchange", function(event) {
     this.media_query();
   });
-  
+
+  this.bottom_controls.style.setProperty('--hover','0');
+  this.left_control_top.style.setProperty('--hover','0');
+  this.setting_button.style.setProperty('--hover','0');
+  this.setting_menu.style.setProperty('--hover','0');
+  this.switch.style.setProperty('--hover','0');
+
+ 
 
  } 
 
@@ -1270,10 +1281,10 @@ class JYTP extends Custmize_Jytp{
     this.load_mid_controls();
     this.load_bottom_controls();
     this.load_setting_menu();
+    this.load_menu();
     this.load_document_var();
     this.bind_eventlistener();
   //  this.load_src('new.mp4');
-    this.load_menu();
     this.load_submenu();
     
     
@@ -1281,3 +1292,4 @@ class JYTP extends Custmize_Jytp{
 }
 
 
+ 
