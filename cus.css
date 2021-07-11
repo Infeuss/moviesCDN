@@ -1,6 +1,6 @@
 
 
- .bottom-video-controls *,top-video-controls *{
+ .bottom-video-controls *,.top-video-controls *{
   padding: 0;
   margin: 0;
   box-sizing: unset !important;
