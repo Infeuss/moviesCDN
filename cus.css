@@ -1,6 +1,5 @@
 
 
-
 *{
   padding: 0;
   margin: 0;
@@ -14,6 +13,11 @@
 }
 
 
+.container{
+ max-width:1200px;
+ width: 100%;
+ min-height: 15rem;
+}
 
 :root{
   --title-font-size : 140%;
@@ -41,12 +45,7 @@
   --onhover-height : 5.8px;
   --spinner-transform-scale : 1; 
   --tooltip-transform-scale : 1; 
-  
-  
-  
- /* event on hover*/
-  
-  --bottom-hover : false;
+
 
 }
 
@@ -82,6 +81,7 @@
   background-color: black;
   width: 100%;
   height: 100%;
+  min-height: 15rem;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -440,9 +440,7 @@ background-color: #f00;
   transition: all 0.15s ease-in;
 
 }
-.bottom-video-controls:hover{
---bottom-hover:true;
-}
+
 
 .video-progress{
   position: relative;
@@ -735,6 +733,9 @@ svg > path {
    display: none !important;
 }
 
+.bottom-video-controls:hover,.left-control-top:hover,.switch:hover,.settings-menu:hover,.setting-button:hover{
+  --hover: 1 !important;
+}
 
 
 
