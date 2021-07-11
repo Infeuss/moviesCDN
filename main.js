@@ -150,7 +150,7 @@ load_bottom_controls = ()=>{
         
     let code = ` <div class="bottom-video-controls" id="bottom-video-controls">
     <div class="video-progress" id="video-progress">
-      <progress id="progress-bar" class="progress-bar" value="5" min="0"></progress>
+      <progress id="progress-bar" class="progress-bar-py" value="5" min="0"></progress>
       <input class="seek" id="seek" value="0" min="0" type="range" step="1">
       <div class="seek-tooltip" id="seek-tooltip">00:00</div>
     </div>
