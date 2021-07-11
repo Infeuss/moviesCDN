@@ -41,6 +41,12 @@
   --onhover-height : 5.8px;
   --spinner-transform-scale : 1; 
   --tooltip-transform-scale : 1; 
+  
+  
+  
+ /* event on hover*/
+  
+  --bottom-hover : false;
 
 }
 
