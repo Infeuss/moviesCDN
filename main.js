@@ -685,7 +685,8 @@ class methods extends load_structure{
 
   animatePlayback = ()=>{
        console.log(this.bottom_controls.matches(':hover'));
-       console.log($(this.bottom_controls).is(':hover'));
+       console.log(document.documentElement.style.getPropertyValue('--bottom-hover'));
+      
        
     if(!this.bottom_controls.matches(':hover')){
         this.animation_playback.animate([
