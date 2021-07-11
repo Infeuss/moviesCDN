@@ -489,6 +489,7 @@ class methods extends load_structure{
     this.animatePlayback();
     this.video_container.classList.remove('block-controls');
     this.animation_playback.style.opacity = 0;
+    this.setting_menu.style.bottom = parseFloat(this.get_property(this.bottom_controls).height) + 18 + 'px';
     this.msg_resume();
   }
 
@@ -497,6 +498,7 @@ class methods extends load_structure{
     this.add_controls();
     this.animation_playback.querySelector('svg > path').setAttribute('d','M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z');
     this.animatePlayback();
+    this.setting_menu.style.bottom = parseFloat(this.get_property(this.bottom_controls).height) + 18 + 'px';
     this.msg_pause();
   }
 
@@ -871,7 +873,7 @@ class methods extends load_structure{
   media_query  = ()=>{
     let width = this.video_container.offsetWidth;
     let orent = window.orientation;
-    console.log(width);
+   // console.log(width);
     if(this.video_container.classList.contains('mobile')) this.video_container.classList.remove('mobile');
     if(this.video_container.classList.contains('deskstop-fullscreen')) this.video_container.classList.remove('deskstop-fullscreen');
     if(orent == 0 && width <= 540){
@@ -882,6 +884,10 @@ class methods extends load_structure{
         this.video_container.classList.add('deskstop-fullscreen');
     }
     this.setting_menu.style.bottom = parseFloat(this.get_property(this.bottom_controls).height) + 18 + 'px';
+
+    if (!('pictureInPictureEnabled' in document)) {
+      this.pip_button.style.display = 'none';
+     }
   }
   
   play = ()=>{
@@ -1292,4 +1298,3 @@ class JYTP extends Custmize_Jytp{
 }
 
 
- 
