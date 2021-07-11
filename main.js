@@ -1266,10 +1266,10 @@ class JYTP extends Custmize_Jytp{
     this.load_mid_controls();
     this.load_bottom_controls();
     this.load_setting_menu();
-    this.load_menu();
     this.load_document_var();
     this.bind_eventlistener();
   //  this.load_src('new.mp4');
+    this.load_menu();
     this.load_submenu();
     
     
