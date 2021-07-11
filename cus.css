@@ -1,5 +1,6 @@
 
-.video-continer *{
+
+ .video-continer *{
   padding: 0;
   margin: 0;
   box-sizing: unset !important;
@@ -11,7 +12,6 @@
    user-select: none !important;
    
 }
-
 
 
 
@@ -442,7 +442,7 @@ background-color: #f00;
   bottom: 8px;
 }
 
-.progress-bar{
+.progress-bar-py{
   -webkit-appearance: none;
   position: absolute;
   width: 100%;
@@ -453,13 +453,13 @@ background-color: #f00;
   transition: all 0.2s ease-in-out;
 }
 
-.progress-bar::-webkit-progress-bar {
+.progress-bar-py::-webkit-progress-bar {
   -webkit-appearance: none;
   background-color: #ffffff44;
   border-radius: 1px;
 }
 
-.progress-bar::-webkit-progress-value {
+.progress-bar-py::-webkit-progress-value {
   -webkit-appearance: none;
   background-color: #ffffff;
   border-radius: 1px;
@@ -688,11 +688,11 @@ svg > path {
 
 /* progress on hover or click events class */
 
-.video-progress-hover .progress-bar,.video-progress-hover .seek{
+.video-progress-hover .progress-bar-py,.video-progress-hover .seek{
   height: var(--onhover-height);
   top: -1px;
 }
-.video-progress-hover .progress-bar::-webkit-progress-value {
+.video-progress-hover .progress-bar-py::-webkit-progress-value {
   -webkit-appearance: none;
   background-color: #ffffff;
   opacity:0.6;
