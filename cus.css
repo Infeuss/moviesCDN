@@ -929,65 +929,124 @@ svg > path {
 
 
 
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 
-.mobile{
-
-  --title-font-size : 90%;
-  --info-msg-font-size : 70%;
-  --info-svg-size:26px;
-  --setting-menu-width : 180px;
-  --panel-max-height : 170px;
-  --menu-flex-basis : 28px;
-  --menu-lable-font-s : 60%;
-  --sp-con-font-size : 50%;
-  --check-icon-width : 15px;
-  --check-icon-height : 28px;
-  --first-item-basis : 30px;
-  --a-icon-size : 15px;
-  --s-icon-reverse : 20px;
-  --swicth-scale : 0.68;
-  --bottom-ps-height : 3px;
-  --seek-thumb : 12px;
-  --con-button-size : 28px;
-  --volume-height : 2.5px;
-  --volume-thumb : 10px;
-  --time-font-size : 70%;
-  --hd-icon-font-size : 0.25rem;
-  --hd-icon-height: 5px;
-  --onhover-height : 3.8px;
-  --spinner-transform-scale : 0.6; 
-  --tooltip-transform-scale : 0.8; 
-
+@media (min-width: 1281px) {
+  
+  /* CSS */
+  
 }
 
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
 
-.deskstop-fullscreen{
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
 
-  --title-font-size : 160%;
-  --info-msg-font-size : 120%;
-  --info-svg-size:46px;
-  --setting-menu-width : 380px;
-  --panel-max-height : 370px;
-  --menu-flex-basis : 48px;
-  --menu-lable-font-s : 100%;
-  --sp-con-font-size : 90%;
-  --check-icon-width : 25px;
-  --check-icon-height : 38px;
-  --first-item-basis : 60px;
-  --a-icon-size : 28px;
-  --s-icon-reverse : 30px;
-  --swicth-scale : 1;
-  --bottom-ps-height : 5px;
-  --seek-thumb : 16px;
-  --con-button-size : 48px;
-  --volume-height : 4.5px;
-  --volume-thumb : 15px;
-  --time-font-size : 110%;
-  --hd-icon-font-size : 0.35rem;
-  --hd-icon-height: 8px;
-  --onhover-height : 5.8px;
-  --spinner-transform-scale : 1; 
-  --tooltip-transform-scale : 1.2; 
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+  :root{
+    --title-font-size : 90%;
+    --info-msg-font-size : 70%;
+    --info-svg-size:26px;
+    --setting-menu-width : 180px;
+    --panel-max-height : 170px;
+    --menu-flex-basis : 28px;
+    --menu-lable-font-s : 60%;
+    --sp-con-font-size : 50%;
+    --check-icon-width : 15px;
+    --check-icon-height : 28px;
+    --first-item-basis : 30px;
+    --a-icon-size : 15px;
+    --s-icon-reverse : 20px;
+    --swicth-scale : 0.68;
+    --bottom-ps-height : 3px;
+    --seek-thumb : 12px;
+    --con-button-size : 28px;
+    --volume-height : 2.5px;
+    --volume-thumb : 10px;
+    --time-font-size : 70%;
+    --hd-icon-font-size : 0.25rem;
+    --hd-icon-height: 5px;
+    --onhover-height : 3.8px;
+    --spinner-transform-scale : 0.6; 
+    --tooltip-transform-scale : 0.8; 
+  }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+
+  :root{
+    --title-font-size : 110%;
+    --info-msg-font-size : 75%;
+    --info-svg-size:30px;
+    --setting-menu-width : 220px;
+    --panel-max-height : 180px;
+    --menu-flex-basis : 32px;
+    --menu-lable-font-s : 80%;
+    --sp-con-font-size : 60%;
+    --check-icon-width : 15px;
+    --check-icon-height : 28px;
+    --first-item-basis : 40px;
+    --a-icon-size : 18px;
+    --s-icon-reverse : 20px;
+    --swicth-scale : 0.78;
+    --bottom-ps-height : 5px;
+    --seek-thumb : 16px;
+    --con-button-size : 35px;
+    --volume-height : 4.5px;
+    --volume-thumb : 12px;
+    --time-font-size : 85%;
+    --hd-icon-font-size : 0.25rem;
+    --hd-icon-height: 5px;
+    --onhover-height : 5.8px;
+    --spinner-transform-scale : 0.7; 
+    --tooltip-transform-scale : 0.9; 
+  }
+  
 }
 
