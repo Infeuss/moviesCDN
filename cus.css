@@ -981,6 +981,48 @@ svg > path {
 @media (min-width: 481px) and (max-width: 767px) {
   
   /* CSS */
+ 
+   :root{
+    --title-font-size : 110%;
+    --info-msg-font-size : 75%;
+    --info-svg-size:30px;
+    --setting-menu-width : 220px;
+    --panel-max-height : 180px;
+    --menu-flex-basis : 32px;
+    --menu-lable-font-s : 80%;
+    --sp-con-font-size : 60%;
+    --check-icon-width : 15px;
+    --check-icon-height : 28px;
+    --first-item-basis : 40px;
+    --a-icon-size : 18px;
+    --s-icon-reverse : 20px;
+    --swicth-scale : 0.78;
+    --bottom-ps-height : 5px;
+    --seek-thumb : 16px;
+    --con-button-size : 35px;
+    --volume-height : 4.5px;
+    --volume-thumb : 12px;
+    --time-font-size : 85%;
+    --hd-icon-font-size : 0.25rem;
+    --hd-icon-height: 5px;
+    --onhover-height : 5.8px;
+    --spinner-transform-scale : 0.7; 
+    --tooltip-transform-scale : 0.9; 
+  }
+ 
+
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+ 
   :root{
     --title-font-size : 90%;
     --info-msg-font-size : 70%;
@@ -1007,45 +1049,6 @@ svg > path {
     --onhover-height : 3.8px;
     --spinner-transform-scale : 0.6; 
     --tooltip-transform-scale : 0.8; 
-  }
-  
-}
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-  
-  /* CSS */
-
-  :root{
-    --title-font-size : 110%;
-    --info-msg-font-size : 75%;
-    --info-svg-size:30px;
-    --setting-menu-width : 220px;
-    --panel-max-height : 180px;
-    --menu-flex-basis : 32px;
-    --menu-lable-font-s : 80%;
-    --sp-con-font-size : 60%;
-    --check-icon-width : 15px;
-    --check-icon-height : 28px;
-    --first-item-basis : 40px;
-    --a-icon-size : 18px;
-    --s-icon-reverse : 20px;
-    --swicth-scale : 0.78;
-    --bottom-ps-height : 5px;
-    --seek-thumb : 16px;
-    --con-button-size : 35px;
-    --volume-height : 4.5px;
-    --volume-thumb : 12px;
-    --time-font-size : 85%;
-    --hd-icon-font-size : 0.25rem;
-    --hd-icon-height: 5px;
-    --onhover-height : 5.8px;
-    --spinner-transform-scale : 0.7; 
-    --tooltip-transform-scale : 0.9; 
   }
   
 }
