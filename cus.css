@@ -76,13 +76,13 @@
 .video-continer{
   background-color: black;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  min-height: 15rem;
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
- 
 }
 
 
@@ -199,8 +199,10 @@ video{
   position: absolute;
   left: 0;
   right: 0;
-  padding:10px 10px 5px 10px;
+  /* padding:10px 10px 5px 10px; */
+  padding:0;
   transition: all 0.15s ease-in;
+  height: 100%;
 
 }
 
@@ -215,9 +217,10 @@ video{
 .mid-left-control{
   flex-grow: 1;
   display: flex;
-  position: relative;
+  /* position: relative; */
   justify-content: center;
   align-items: center;
+
 }
 
 .mid-mid-control{
@@ -226,15 +229,87 @@ video{
   position: relative;
   justify-content: center;
   align-items: center;
+
 }
 
 .mid-right-control{
   flex-grow: 1;
   display: flex;
-  position: relative;
+  /* position: relative; */
   justify-content: center;
   align-items: center;
+
 }
+
+.right-skip{
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  height: 100%;
+  border-radius: 50% 0 0 50%;
+  background-color: rgba(255, 255, 255, 0.253); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.left-skip{
+  position: absolute;
+  width: 50%;
+   right: 50%;
+  height: 100%;
+  border-radius: 0% 50% 50% 0%;
+  background-color: rgba(255, 255, 255, 0.253); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.skip-span{
+  font-size: 0.8rem;
+  font-family:  "YouTube Noto",Roboto,Arial,Helvetica,sans-serif;
+  font-weight: bold;
+  color:#fff;
+  opacity: 0.8;
+}
+
+.seek-icon > i{
+  color: rgba(255, 255, 255, 0.521);
+  font-size: 2rem;
+}
+.right-skip > .seek-icon > i:nth-child(1){
+  animation: one 0.8s infinite;
+}
+.right-skip > .seek-icon > i:nth-child(2){
+  animation: one 0.8s infinite 0.4s;
+}
+.right-skip > .seek-icon > i:nth-child(3){
+  animation: one 0.8s infinite 0.6s;
+}
+
+.left-skip > .seek-icon > i:nth-child(3){
+  animation: one 0.8s infinite;
+}
+.left-skip > .seek-icon > i:nth-child(2){
+  animation: one 0.8s infinite 0.4s;
+}
+.left-skip > .seek-icon > i:nth-child(1){
+  animation: one 0.8s infinite 0.6s;
+}
+@keyframes one {
+  from{
+    color: #fff;
+  }
+
+  to{
+    color: rgba(255, 255, 255, 0.521);
+  }
+}
+
 
 .playback-animation {
   pointer-events: none;
@@ -929,6 +1004,69 @@ svg > path {
 
 
 
+
+/* .mobile{
+
+  --title-font-size : 90%;
+  --info-msg-font-size : 70%;
+  --info-svg-size:26px;
+  --setting-menu-width : 180px;
+  --panel-max-height : 170px;
+  --menu-flex-basis : 28px;
+  --menu-lable-font-s : 60%;
+  --sp-con-font-size : 50%;
+  --check-icon-width : 15px;
+  --check-icon-height : 28px;
+  --first-item-basis : 30px;
+  --a-icon-size : 15px;
+  --s-icon-reverse : 20px;
+  --swicth-scale : 0.68;
+  --bottom-ps-height : 3px;
+  --seek-thumb : 12px;
+  --con-button-size : 28px;
+  --volume-height : 2.5px;
+  --volume-thumb : 10px;
+  --time-font-size : 70%;
+  --hd-icon-font-size : 0.25rem;
+  --hd-icon-height: 5px;
+  --onhover-height : 3.8px;
+  --spinner-transform-scale : 0.6; 
+  --tooltip-transform-scale : 0.8; 
+
+}
+
+
+.deskstop-fullscreen{
+
+  --title-font-size : 160%;
+  --info-msg-font-size : 120%;
+  --info-svg-size:46px;
+  --setting-menu-width : 380px;
+  --panel-max-height : 370px;
+  --menu-flex-basis : 48px;
+  --menu-lable-font-s : 100%;
+  --sp-con-font-size : 90%;
+  --check-icon-width : 25px;
+  --check-icon-height : 38px;
+  --first-item-basis : 60px;
+  --a-icon-size : 28px;
+  --s-icon-reverse : 30px;
+  --swicth-scale : 1;
+  --bottom-ps-height : 5px;
+  --seek-thumb : 16px;
+  --con-button-size : 48px;
+  --volume-height : 4.5px;
+  --volume-thumb : 15px;
+  --time-font-size : 110%;
+  --hd-icon-font-size : 0.35rem;
+  --hd-icon-height: 8px;
+  --onhover-height : 5.8px;
+  --spinner-transform-scale : 1; 
+  --tooltip-transform-scale : 1.2; 
+
+} */
+
+
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -937,19 +1075,79 @@ svg > path {
 @media (min-width: 1281px) {
   
   /* CSS */
+  /* :root{
+    --title-font-size : 160%;
+    --info-msg-font-size : 100%;
+    --info-svg-size:36px;
+    --setting-menu-width : 280px;
+    --panel-max-height : 300px;
+    --menu-flex-basis : 44px;
+    --menu-lable-font-s : 90%;
+    --sp-con-font-size : 75%;
+    --check-icon-width : 30px;
+    --check-icon-height : 30px;
+    --first-item-basis : 55px;
+    --a-icon-size : 28px;
+    --s-icon-reverse : 28px;
+    --swicth-scale : 1;
+    --bottom-ps-height : 4px;
+    --seek-thumb : 14px;
+    --con-button-size : 40px;
+    --volume-height : 5px;
+    --volume-thumb : 14px;
+    --time-font-size : 100%;
+    --hd-icon-font-size : 0.5rem;
+    --hd-icon-height: 9px;
+    --onhover-height : 5.8px;
+    --spinner-transform-scale : 1; 
+    --tooltip-transform-scale : 1; 
+  
+  } */
   
 }
+
 
 /* 
   ##Device = Laptops, Desktops
   ##Screen = B/w 1025px to 1280px
 */
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+
+@media (min-width: 1025px) and (max-width: 1280px){
   
   /* CSS */
+  :root{
+    --title-font-size : 160%;
+    --info-msg-font-size : 100%;
+    --info-svg-size:36px;
+    --setting-menu-width : 280px;
+    --panel-max-height : 300px;
+    --menu-flex-basis : 44px;
+    --menu-lable-font-s : 90%;
+    --sp-con-font-size : 75%;
+    --check-icon-width : 30px;
+    --check-icon-height : 30px;
+    --first-item-basis : 55px;
+    --a-icon-size : 28px;
+    --s-icon-reverse : 28px;
+    --swicth-scale : 1;
+    --bottom-ps-height : 4px;
+    --seek-thumb : 14px;
+    --con-button-size : 40px;
+    --volume-height : 5px;
+    --volume-thumb : 14px;
+    --time-font-size : 100%;
+    --hd-icon-font-size : 0.5rem;
+    --hd-icon-height: 9px;
+    --onhover-height : 5.8px;
+    --spinner-transform-scale : 1; 
+    --tooltip-transform-scale : 1; 
+  
+  
+  }
   
 }
+
 
 /* 
   ##Device = Tablets, Ipads (portrait)
@@ -959,6 +1157,35 @@ svg > path {
 @media (min-width: 768px) and (max-width: 1024px) {
   
   /* CSS */
+  :root{
+    --title-font-size : 160%;
+    --info-msg-font-size : 100%;
+    --info-svg-size:36px;
+    --setting-menu-width : 280px;
+    --panel-max-height : 300px;
+    --menu-flex-basis : 44px;
+    --menu-lable-font-s : 90%;
+    --sp-con-font-size : 75%;
+    --check-icon-width : 30px;
+    --check-icon-height : 30px;
+    --first-item-basis : 55px;
+    --a-icon-size : 28px;
+    --s-icon-reverse : 28px;
+    --swicth-scale : 1;
+    --bottom-ps-height : 4px;
+    --seek-thumb : 14px;
+    --con-button-size : 40px;
+    --volume-height : 5px;
+    --volume-thumb : 14px;
+    --time-font-size : 100%;
+    --hd-icon-font-size : 0.5rem;
+    --hd-icon-height: 9px;
+    --onhover-height : 5.8px;
+    --spinner-transform-scale : 1; 
+    --tooltip-transform-scale : 1; 
+  
+  
+  }
   
 }
 
@@ -970,32 +1197,34 @@ svg > path {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
   /* CSS */
-    :root{
-    --title-font-size : 110%;
-    --info-msg-font-size : 75%;
-    --info-svg-size:30px;
-    --setting-menu-width : 220px;
-    --panel-max-height : 180px;
-    --menu-flex-basis : 32px;
-    --menu-lable-font-s : 80%;
-    --sp-con-font-size : 60%;
-    --check-icon-width : 15px;
-    --check-icon-height : 28px;
-    --first-item-basis : 40px;
-    --a-icon-size : 18px;
-    --s-icon-reverse : 20px;
-    --swicth-scale : 0.78;
-    --bottom-ps-height : 5px;
-    --seek-thumb : 16px;
-    --con-button-size : 35px;
-    --volume-height : 4.5px;
-    --volume-thumb : 12px;
-    --time-font-size : 85%;
-    --hd-icon-font-size : 0.25rem;
-    --hd-icon-height: 5px;
+
+  :root{
+    --title-font-size : 140%;
+    --info-msg-font-size : 100%;
+    --info-svg-size:36px;
+    --setting-menu-width : 280px;
+    --panel-max-height : 300px;
+    --menu-flex-basis : 44px;
+    --menu-lable-font-s : 90%;
+    --sp-con-font-size : 75%;
+    --check-icon-width : 30px;
+    --check-icon-height : 30px;
+    --first-item-basis : 55px;
+    --a-icon-size : 28px;
+    --s-icon-reverse : 28px;
+    --swicth-scale : 1;
+    --bottom-ps-height : 4px;
+    --seek-thumb : 14px;
+    --con-button-size : 40px;
+    --volume-height : 5px;
+    --volume-thumb : 14px;
+    --time-font-size : 100%;
+    --hd-icon-font-size : 0.5rem;
+    --hd-icon-height: 9px;
     --onhover-height : 5.8px;
-    --spinner-transform-scale : 0.7; 
-    --tooltip-transform-scale : 0.9; 
+    --spinner-transform-scale : 1; 
+    --tooltip-transform-scale : 1; 
+  
   }
   
 }
