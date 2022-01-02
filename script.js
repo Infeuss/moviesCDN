@@ -72,13 +72,13 @@ await Promise.all(content.map(async (item,index) => {
   }));
 
   $(".country").click(function (e) {
-    let genre = content[parseInt($(this).data("i"))];
-    $("#modal_mac").text(genre.m);
-    $("#genre").html("");
+//     let genre = content[parseInt($(this).data("i"))];
+//     $("#modal_mac").text(genre.m);
+//     $("#genre").html("");
 
-    genre.c.map((item)=>{
-        $("#genre").append(`<span class="badge badge-md badge-success text-uppercase mx-1 mt-1">${item}</span>`);
-    });
+//     genre.c.map((item)=>{
+//         $("#genre").append(`<span class="badge badge-md badge-success text-uppercase mx-1 mt-1">${item}</span>`);
+//     });
 
     $('#modal-form').modal('show');
 });
@@ -106,9 +106,9 @@ $("#d").click(async () => {
 
        text_data += `═══════════════════════════════════════════════\nℙ𝕠𝕣𝕥𝕒𝕝 ➽ ${item.p}\n𝕄𝕒𝕔 ➽ ${item.m}\n𝔼𝕩𝕡𝕚𝕣𝕖 ➽ ${item.e}\nℂ𝕠𝕦𝕟𝕥𝕣𝕪 ➽ `;
 
-     item.c.map(async (gen)=>{
-           text_data += gen+" | ";
-      })
+//      item.c.map(async (gen)=>{
+//            text_data += gen+" | ";
+//       })
 
        text_data += `\n𝕁𝕠𝕚𝕟 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 ➽ @stbfree_mac\n═══════════════════════════════════════════════\n`;
 
